@@ -4,7 +4,7 @@ programa {
   funcao inicio() {
 
     cadeia cpf, digitos = "", digito[14]
-    inteiro tam, primeiro_verificado, cont = 0, contador = 3, soma = 0, resto, contadorI = 0, tam14 = 14, cpf_formatado[11], so_numeros[9], multipliocador = 10
+    inteiro tam, primeiro_verificado, cont = 0, contador = 3, soma = 0, resto, contadorI = 0, tam14 = 14, cpf_formatado[11], so_numeros[9], multiplicador = 10
     caracter cpf14[14], aux = ' ', cpf11[11]
     logico teste
 
@@ -95,8 +95,8 @@ programa {
           so_numeros[i] = cpf_formatado[i]
         }
         para(inteiro i = 0; i < 9; i++){
-          soma = soma + (so_numeros[i] * multipliocador)
-          multipliocador--
+          soma = soma + (so_numeros[i] * multiplicador)
+          multiplicador--
         }
         resto = soma % 11
         se(resto < 2){
@@ -107,8 +107,8 @@ programa {
         }       
         escreva("\nO CPF digitado pelo usuário é: ",cpf)
         escreva("\nPrimeirop digito verificado pelo sistema é: ",primeiro_verificado)
-        escreva("\nPrimeiro digito verificador digitado pelo usuário é: ",Texto.obter_caracter(cpf, 12))
-        escreva("\nComparação do PDV encontrado com PDV digitado: ",primeiro_verificado == Texto.obter_caracter(cpf, 12),"\n")
+        escreva("\nPrimeiro digito verificador digitado pelo usuário é: ",cpf_formatado[9])
+        escreva("\nComparação do PDV encontrado com PDV digitado: ",primeiro_verificado == cpf_formatado[9],"\n")
   }
 }
 
