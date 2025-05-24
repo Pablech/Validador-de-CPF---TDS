@@ -187,6 +187,25 @@ Calcular e encontrar o Primeiro Dígito Verificador - PDV.
     - [x] O resultado da comparação do PDV encontrado com o PDV do CPF digitado;
 - [x] A atualização do código tem que ser feito por um integrante que ainda não realizou um [`Pull Request`](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork);
 
+## Etapa 8: Dígito 2
+
+### Objetivos
+Calcular e encontrar o Segundo Dígito Verificador - SDV.
+
+### Tarefas
+- [x] Receba um CPF válido do usuário (formatos suportados `XXX.XXX.XXX-YY` ou `XXXXXXXXXYY`).
+- [x] Se o formato não for válido, encerre o programa.
+- [x] Calcule o [Primeiro Dígito Verificador](#cálculo-do-primeiro-dígito) conforme especificado.
+- [ ] Calcule o [Segundo Dígito Verificador](#cálculo-do-segundo-dígito) conforme especificado.
+- Ao final, mostre :
+    - [x] O CPF conforme foi digitado;
+    - [x] O Primeiro Dígito Verificador encontrado;
+    - [ ] O Segundo Dígito Verificador encontrado;
+    - [x] O resultado da comparação do PDV encontrado com o PDV do CPF digitado;
+    - [ ] O resultado da comparação do SDV encontrado com o SDV do CPF digitado;
+    - [ ] Uma mensagem informando se o CPF é válido ou não;
+
+
 
 # Como usar checkbox no README
 
