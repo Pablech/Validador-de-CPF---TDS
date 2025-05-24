@@ -67,6 +67,43 @@ No exemplo, o resto obitido foi oito, logo o primeiro dígito verificador é o o
 
 O primeiro dígito verificador é 3.
 
+### Cálculo do Segundo Dígito
+
+Para calcular o segundo dígito, é necessário já saber qual é o [primeiro digito calculado](#cálculo-do-primeiro-dígito). O mesmo processo de multiplicação e soma terá que ser realizado, mas dessa vez é incluído o recém calculado primeiro dígito verificador ao final. E, em vez de iniciar a multiplicação em 10 e decrescer até o 2, é iniciado em `11` e decrescendo ainda até o 2.
+
+Veja a tabela abaixo :
+
+> | Dígito CPF|| Multiplicador|| Resultado |
+> | :----: | :----: | :----: | :----: | :----: |
+> ||||||
+> | `1` | * | `11` | = | `11` |
+> | `1` | * | `10` | = | `10` |
+> | `1` | * | `9` | = | `9` |
+> | `4` | * | `8` | = | `32` |
+> | `4` | * | `7` | = | `28` |
+> | `4` | * | `6` | = | `24` |
+> | `7` | * | `5` | = | `35` |
+> | `7` | * | `4` | = | `28` |
+> | `7` | * | `3` | = | `21` |
+> | `3` | * | `2` | = | `6` |
+> ||||||
+
+Novamente é efetuada a soma dos resultados da multiplicação :
+
+> `11` + `10` + `9` + `32` + `28` + `24` + `35` + `28` + `21` + `6` = `204`
+
+E novamente o total do somatório é dividido por onze para obter o quociente `18` e o resto `6` da divisão.
+
+Uma vez conhecidos o resto e o quociente, o mesmo teste do resto é realizado :
+- se o resto da divisão for `menor que 2`, então o segundo dígito é igual a `zero`;
+- se o resto da divisão for `maior ou igual a 2`, então o dígito verificador é igual a `11 menos o resto da divisão`;
+
+No exemplo, subtraindo 11 do resto resultará em :
+
+> `11 - 6 = 5`
+
+Logo, `5` é o segundo dígito verificador.
+
 ## Checklist de Etapas
 
 Cada etapa deverá ser documentada corretamente nas mensagens de commit, usando uma descrição como:
