@@ -4,7 +4,7 @@ programa {
   funcao inicio() {
 
     cadeia cpf, digitos = "", digito[14]
-    inteiro tam, primeiro_verificado, cont = 0, contador = 3, soma = 0, resto, contadorI = 0, tam14 = 14, cpf_formatado[11], so_numeros[9], multiplicador = 10
+    inteiro tam, primeiro_verificado, segundo_verificado, cont = 0, contador = 3, soma = 0, resto, contadorI = 0, tam14 = 14, cpf_formatado[11], so_numeros[9], multiplicador = 10
     caracter cpf14[14], aux = ' ', cpf11[11]
     logico teste
 
@@ -94,6 +94,8 @@ programa {
         para(inteiro i = 0; i < 9; i++){
           so_numeros[i] = cpf_formatado[i]
         }
+        soma = 0
+        multiplicador = 10
         para(inteiro i = 0; i < 9; i++){
           soma = soma + (so_numeros[i] * multiplicador)
           multiplicador--
@@ -104,11 +106,27 @@ programa {
         }
         senao{
           primeiro_verificado = 11 - resto
-        }       
+        } 
+        soma = 0
+        multiplicador = 11  
+        para(inteiro i = 0; i < 9; i++){
+          soma = soma + (so_numeros[i] * multiplicador)
+          multiplicador-- 
+        }
+        soma = soma + (primeiro_verificado * 2)
+        resto = soma % 11
+        se(resto < 2){
+        	segundo_verificado = 0   
+        }
+        senao{
+        	segundo_verificado = 11 - resto
+        }
         escreva("\nO CPF digitado pelo usuário é: ",cpf)
         escreva("\nPrimeirop digito verificado pelo sistema é: ",primeiro_verificado)
-        escreva("\nPrimeiro digito verificador digitado pelo usuário é: ",cpf_formatado[9])
+        escreva("\nprimeiro digito informado no CPF: ",cpf_formatado[9])
         escreva("\nComparação do PDV encontrado com PDV digitado: ",primeiro_verificado == cpf_formatado[9],"\n")
+        escreva("\no Segundo dígito verificado pelo sistema é: ", segundo_verificado)
+	   escreva("\nSegundo dígito informado no CPF: ", cpf_formatado[10])
+	   escreva("\nVerificação do segundo dígito: ", segundo_verificado == cpf_formatado[10])
   }
 }
-
