@@ -196,14 +196,14 @@ Calcular e encontrar o Segundo Dígito Verificador - SDV.
 - [x] Receba um CPF válido do usuário (formatos suportados `XXX.XXX.XXX-YY` ou `XXXXXXXXXYY`).
 - [x] Se o formato não for válido, encerre o programa.
 - [x] Calcule o [Primeiro Dígito Verificador](#cálculo-do-primeiro-dígito) conforme especificado.
-- [ ] Calcule o [Segundo Dígito Verificador](#cálculo-do-segundo-dígito) conforme especificado.
+- [x] Calcule o [Segundo Dígito Verificador](#cálculo-do-segundo-dígito) conforme especificado.
 - Ao final, mostre :
     - [x] O CPF conforme foi digitado;
     - [x] O Primeiro Dígito Verificador encontrado;
-    - [ ] O Segundo Dígito Verificador encontrado;
+    - [x]xO Segundo Dígito Verificador encontrado;
     - [x] O resultado da comparação do PDV encontrado com o PDV do CPF digitado;
-    - [ ] O resultado da comparação do SDV encontrado com o SDV do CPF digitado;
-    - [ ] Uma mensagem informando se o CPF é válido ou não;
+    - [x] O resultado da comparação do SDV encontrado com o SDV do CPF digitado;
+    - [x] Uma mensagem informando se o CPF é válido ou não;
 
 
 
