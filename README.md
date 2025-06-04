@@ -211,7 +211,7 @@ Calcular e encontrar o Segundo Dígito Verificador - SDV.
 A partir do código original, recriem ele usando o Python.
 
 ### Tarefas
-- [ ] Recriar o código, a partir do original, em Python;
+- [x] Recriar o código, a partir do original, em Python;
 
 # Como usar checkbox no README
 
